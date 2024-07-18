@@ -1,10 +1,14 @@
 ﻿#include "AddLib.h"
+#include "AddLibInterface.h"
 
 int main()
 {
-    AddLib add;
-    add.InitData();
-    add.Start();
-	while (true);
+    AddLibInterface *add = new AddLib;
+    add->InitData();
+    add->Start();
+    while (true)
+    {
+
+    }
     return -1;
 }

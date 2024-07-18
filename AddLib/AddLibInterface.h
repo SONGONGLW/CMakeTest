@@ -1,4 +1,7 @@
-﻿#include "AddLib_global.h"
+﻿#ifndef ADDLIBINTERFACE_H
+#define ADDLIBINTERFACE_H
+
+#include "AddLib_global.h"
 
 class SCHEDULERSHARED_EXPORT AddLibInterface
 {
@@ -11,3 +14,5 @@ public:
     virtual void ScThreadFunction() = 0;
     virtual void XfThreadFunction() = 0;
 };
+
+#endif // ADDLIBINTERFACE_H

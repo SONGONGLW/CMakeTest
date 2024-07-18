@@ -1,4 +1,7 @@
-﻿#include "AddLibInterface.h"
+﻿#ifndef ADDLIB_H
+#define ADDLIB_H
+
+#include "AddLibInterface.h"
 #include <thread>
 #include <condition_variable>
 #include <mutex>
@@ -28,3 +31,8 @@ private:
     queue<int> m_queueData;
 
 };
+
+#endif // ADDLIB_H
+
+// 工厂函数声明
+extern "C" SCHEDULERSHARED_EXPORT AddLibInterface* CreateMyClassInstance();

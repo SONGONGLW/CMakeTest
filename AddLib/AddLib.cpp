@@ -55,3 +55,13 @@ void AddLib::XfThreadFunction()
         this_thread::sleep_for(chrono::milliseconds(500));
     }
 }
+
+AddLibInterface *CreateMyClassInstance()
+{
+    return new AddLib();
+}
+
+void DestroyMyClassInstance(AddLibInterface *instance)
+{
+    delete instance;
+}
