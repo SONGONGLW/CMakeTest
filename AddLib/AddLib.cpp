@@ -60,8 +60,3 @@ AddLibInterface *CreateMyClassInstance()
 {
     return new AddLib();
 }
-
-void DestroyMyClassInstance(AddLibInterface *instance)
-{
-    delete instance;
-}

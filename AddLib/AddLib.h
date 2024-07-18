@@ -16,6 +16,8 @@ public:
     void InitData() override;
     void Start() override;
 
+private:
+
     void ScThreadFunction() override;
     void XfThreadFunction() override;
 
@@ -33,6 +35,3 @@ private:
 };
 
 #endif // ADDLIB_H
-
-// 工厂函数声明
-extern "C" SCHEDULERSHARED_EXPORT AddLibInterface* CreateMyClassInstance();

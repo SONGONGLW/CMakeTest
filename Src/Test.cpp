@@ -6,9 +6,8 @@ int main()
     AddLibInterface *add = new AddLib;
     add->InitData();
     add->Start();
-    while (true)
-    {
 
-    }
+    delete add;
+    while (true) {}
     return -1;
 }
