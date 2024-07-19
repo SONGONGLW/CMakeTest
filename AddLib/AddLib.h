@@ -13,25 +13,27 @@ class SCHEDULERSHARED_EXPORT AddLib : public AddLibInterface
 {
 public:
     ~AddLib() override;
+
+    void TestOut();
     void InitData() override;
     void Start() override;
 
-private:
-
-    void ScThreadFunction() override;
-    void XfThreadFunction() override;
+    void ScThreadFunction();
+    void XfThreadFunction();
 
 private:
     thread m_scThread;
     thread m_xfThread;
 
-    bool m_threadStop;
+    bool m_scthreadStop;
+    bool m_xfthreadStop;
     condition_variable m_conditionNotFull;
     condition_variable m_conditionFull;
     mutex m_mutexNotFull;
     mutex m_mutexFull;
     queue<int> m_queueData;
 
+    int m_dataStart;
 };
 
 #endif // ADDLIB_H
